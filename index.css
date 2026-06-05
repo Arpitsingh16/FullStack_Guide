@@ -1,0 +1,250 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background: #f5f5f3;
+  color: #1a1a18;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+}
+
+.wrap {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 500;
+  color: #1a1a18;
+}
+
+.reset-btn {
+  font-size: 12px;
+  color: #6b6b67;
+  background: none;
+  border: 0.5px solid #ccc;
+  border-radius: 8px;
+  padding: 5px 12px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.reset-btn:hover { background: #ebebea; }
+
+/* Stats */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 1rem;
+}
+
+.stat {
+  background: #ebebea;
+  border-radius: 8px;
+  padding: 10px 12px;
+  text-align: center;
+}
+
+.stat-num {
+  font-size: 22px;
+  font-weight: 500;
+  color: #1a1a18;
+}
+
+.stat-lbl {
+  font-size: 11px;
+  color: #6b6b67;
+  margin-top: 2px;
+}
+
+/* Progress bar */
+.progress-bar {
+  height: 6px;
+  background: #ddd;
+  border-radius: 99px;
+  overflow: hidden;
+  margin-bottom: 4px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #1D9E75;
+  border-radius: 99px;
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+.prog-label {
+  font-size: 12px;
+  color: #6b6b67;
+  margin-bottom: 1.5rem;
+}
+
+/* Day cards */
+.day-card {
+  border: 0.5px solid #d3d1c7;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  background: #fff;
+  transition: border-color 0.2s;
+}
+
+.day-card.done {
+  border-color: #0F6E56;
+  background: #f5fbf8;
+}
+
+.day-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.15s;
+}
+
+.day-header:hover { background: #f7f7f6; }
+
+.day-check {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 0.5px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  cursor: pointer;
+  background: #fff;
+  transition: all 0.2s;
+  font-size: 13px;
+  color: #fff;
+}
+
+.day-check.checked {
+  background: #1D9E75;
+  border-color: #1D9E75;
+}
+
+.day-info { flex: 1; min-width: 0; }
+
+.day-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: #1a1a18;
+}
+
+.day-date {
+  font-size: 11px;
+  color: #6b6b67;
+  margin-top: 1px;
+}
+
+.day-meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.tag {
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 99px;
+  white-space: nowrap;
+}
+
+.tag-topics  { background: #E1F5EE; color: #0F6E56; }
+.tag-project { background: #EEEDFE; color: #534AB7; }
+.tag-tasks   { background: #FAEEDA; color: #854F0B; }
+
+.day-progress {
+  font-size: 11px;
+  color: #6b6b67;
+  white-space: nowrap;
+  margin-left: 4px;
+}
+
+.chevron {
+  font-size: 18px;
+  color: #6b6b67;
+  transition: transform 0.2s;
+  flex-shrink: 0;
+}
+
+.chevron.open { transform: rotate(180deg); }
+
+/* Day body */
+.day-body {
+  border-top: 0.5px solid #d3d1c7;
+  padding: 12px 14px;
+  display: none;
+}
+
+.day-body.open { display: block; }
+
+.section-label {
+  font-size: 11px;
+  font-weight: 500;
+  color: #888780;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 6px;
+  margin-top: 12px;
+}
+
+.section-label:first-child { margin-top: 0; }
+
+.item-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 0;
+  cursor: pointer;
+}
+
+.item-box {
+  width: 16px;
+  height: 16px;
+  border: 0.5px solid #ccc;
+  border-radius: 3px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  transition: all 0.15s;
+  font-size: 11px;
+  color: #fff;
+}
+
+.item-box.checked {
+  background: #1D9E75;
+  border-color: #1D9E75;
+}
+
+.item-row:hover .item-box { border-color: #999; }
+
+.item-text {
+  font-size: 13px;
+  color: #1a1a18;
+  line-height: 1.4;
+}
+
+.item-text.checked {
+  color: #aaa;
+  text-decoration: line-through;
+}

@@ -1,24 +1,333 @@
 const DAYS = [
-  { day:1,  date:"06 Jun", title:"HTML Basics",           topics:["HTML Basics","Headings","Paragraphs","Images","Links","Lists","Forms","HTML Structure"], project:["Personal Profile Page"] },
-  { day:2,  date:"07 Jun", title:"CSS Fundamentals",      topics:["CSS Fundamentals","Colors","Fonts","Margin","Padding","Borders","Classes","IDs"], project:["Style Profile Page"] },
-  { day:3,  date:"08 Jun", title:"Business Card Project", topics:["Business Card Project"], project:["Rebuild Without Watching"] },
-  { day:4,  date:"09 Jun", title:"Space Exploration",     topics:["Space Exploration Project"], project:["Customize Design"] },
-  { day:5,  date:"10 Jun", title:"Birthday & Hometown",   topics:["Birthday Website","Hometown Homepage"], project:["Create Your Own Hometown Page"] },
-  { day:6,  date:"11 Jun", title:"JavaScript Basics",     topics:["JavaScript Basics","Variables","Functions","Events","Counter App"], project:["Build Counter App"] },
-  { day:7,  date:"12 Jun", title:"JS Challenges + Git",   topics:["JavaScript Challenges","Git Basics"], tasks:["Create GitHub Repository","Push First Project"] },
-  { day:8,  date:"13 Jun", title:"Blackjack Game",        topics:["Blackjack Game","Arrays","Objects","Conditions","Functions"], project:["Blackjack Game"] },
-  { day:9,  date:"20 Jun", title:"Chrome Extension",      topics:["JavaScript Challenges","Chrome Extension","DOM","Local Storage"], project:["Chrome Extension"] },
-  { day:10, date:"21 Jun", title:"More JS + GitHub",      topics:["More JavaScript","Command Line","GitHub Skills"], tasks:["Practice Git Commands","Practice Terminal Commands"] },
-  { day:11, date:"22 Jun", title:"Advanced JavaScript",   topics:["Advanced JavaScript","Scope","Methods","Loops","Function Expressions"], tasks:["Solve Practice Problems"] },
-  { day:12, date:"23 Jun", title:"Async JS + APIs",       topics:["Async JavaScript","APIs","Promises","Fetch","Async/Await"], project:["Weather App"] },
-  { day:13, date:"24 Jun", title:"Node.js + Express",     topics:["AI Fundamentals","Node.js","Express","Build Node API"], project:["REST API"] },
-  { day:14, date:"25 Jun", title:"Full Stack App",        topics:["Full Stack Node App","Database Introduction"], tasks:["Connect App to Database"] },
-  { day:15, date:"26 Jun", title:"SQL",                   topics:["SQL","SELECT","INSERT","UPDATE","DELETE","JOIN"], tasks:["SQL Practice"] },
-  { day:16, date:"27 Jun", title:"React Basics",          topics:["React Basics","JSX","Components"], project:["First React App"] },
-  { day:17, date:"28 Jun", title:"React Props",           topics:["React Props","Dynamic Rendering"], tasks:["Build Components with Props"] },
-  { day:18, date:"29 Jun", title:"React State",           topics:["React State","useState","Forms","Events"], project:["Interactive React App"] },
-  { day:19, date:"30 Jun", title:"useEffect + Capstone",  topics:["useEffect","API Calls","React Capstone"], project:["Complete Capstone Project"] },
-  { day:20, date:"01 Jul", title:"TypeScript + Next.js",  topics:["TypeScript Fundamentals","TypeScript in React","Next.js","Rendering Strategies"], project:["Build Next.js App"] },
+{
+  day: 1,
+  title: "Video 1",
+  tasks: [
+    "00:00 - 11:07 Environment Setup",
+    "11:07 - 39:18 HTML"
+  ]
+},
+{
+  day: 2,
+  title: "Video 1",
+  tasks: [
+    "39:18 - 01:10:00 CSS Basics"
+  ]
+},
+{
+  day: 3,
+  title: "Video 1",
+  tasks: [
+    "01:10:00 - 01:41:26 CSS Advanced"
+  ]
+},
+{
+  day: 4,
+  title: "Video 1",
+  tasks: [
+    "01:41:26 - 02:17:07 CSS Project"
+  ]
+},
+{
+  day: 5,
+  title: "Video 2",
+  tasks: [
+    "00:00 - 48:44 Units",
+    "48:44 - 01:17:14 Flexbox"
+  ]
+},
+{
+  day: 6,
+  title: "Video 2",
+  tasks: [
+    "01:17:14 - 01:51:05 Grid",
+    "01:51:05 - End Media Queries"
+  ]
+},
+{
+  day: 7,
+  title: "Video 2",
+  tasks: [
+    "Tailwind Responsiveness",
+    "Project Section"
+  ]
+},
+{
+  day: 8,
+  title: "Video 3",
+  tasks: [
+    "00:00 - 01:06:48 Variables",
+    "01:06:48 - 02:03:57 Data Types"
+  ]
+},
+{
+  day: 9,
+  title: "Video 3",
+  tasks: [
+    "02:03:57 - 03:20:40 Operators",
+    "03:20:40 - 04:39:18 Loops"
+  ]
+},
+{
+  day: 10,
+  title: "Video 3",
+  tasks: [
+    "04:39:18 - 06:17:14 Functions"
+  ]
+},
+{
+  day: 11,
+  title: "Video 3",
+  tasks: [
+    "06:17:14 - 07:16:36 Arrays",
+    "07:16:36 - End Objects"
+  ]
+},
+{
+  day: 12,
+  title: "Video 4",
+  tasks: [
+    "00:00 - 01:38:46 DOM"
+  ]
+},
+{
+  day: 13,
+  title: "Video 4",
+  tasks: [
+    "01:38:46 - 04:16:37 Events"
+  ]
+},
+{
+  day: 14,
+  title: "Video 4",
+  tasks: [
+    "04:16:37 - End Forms, Timers, Storage"
+  ]
+},
+{
+  day: 15,
+  title: "Video 5",
+  tasks: [
+    "00:00 - 01:13:15 Scope, Execution Context, Closures"
+  ]
+},
+{
+  day: 16,
+  title: "Video 5",
+  tasks: [
+    "01:13:15 - 02:10:04 this Keyword"
+  ]
+},
+{
+  day: 17,
+  title: "Video 5",
+  tasks: [
+    "02:10:04 - 03:08:05 OOP"
+  ]
+},
+{
+  day: 18,
+  title: "Video 5",
+  tasks: [
+    "03:08:05 - End Promises, Async Await, Fetch"
+  ]
+},
+{
+  day: 19,
+  title: "Video 6",
+  tasks: [
+    "Module Pattern",
+    "Revealing Module Pattern"
+  ]
+},
+{
+  day: 20,
+  title: "Video 6",
+  tasks: [
+    "Factory Pattern",
+    "Observer Pattern"
+  ]
+},
+{
+  day: 21,
+  title: "JavaScript Revision",
+  tasks: [
+    "Revise Videos 3-6",
+    "Build Notes App"
+  ]
+},
+{
+  day: 22,
+  title: "Video 7",
+  tasks: [
+    "00:00 - 01:47:37 React Basics + Props"
+  ]
+},
+{
+  day: 23,
+  title: "Video 7",
+  tasks: [
+    "01:47:37 - 04:30:51 Props Projects + Styling"
+  ]
+},
+{
+  day: 24,
+  title: "Video 7",
+  tasks: [
+    "04:30:51 - 06:15:46 Functions, Hooks, Forms"
+  ]
+},
+{
+  day: 25,
+  title: "Video 7",
+  tasks: [
+    "06:15:46 - 08:17:01 Notes App + API Calls"
+  ]
+},
+{
+  day: 26,
+  title: "Video 7",
+  tasks: [
+    "08:17:01 - End Routing + Context API"
+  ]
+},
+{
+  day: 27,
+  title: "Video 8",
+  tasks: [
+    "Redux Complete"
+  ]
+},
+{
+  day: 28,
+  title: "Video 9",
+  tasks: [
+    "00:00 - 01:22:09 TypeScript Fundamentals"
+  ]
+},
+{
+  day: 29,
+  title: "Video 9",
+  tasks: [
+    "01:22:09 - 02:50:09 Classes & OOP"
+  ]
+},
+{
+  day: 30,
+  title: "Video 9",
+  tasks: [
+    "02:50:09 - End Functions, Generics, Modules"
+  ]
+},
+{
+  day: 31,
+  title: "Video 10",
+  tasks: [
+    "00:00 - 01:43:36 Express + APIs"
+  ]
+},
+{
+  day: 32,
+  title: "Video 10",
+  tasks: [
+    "01:43:36 - 04:32:30 MongoDB + Project"
+  ]
+},
+{
+  day: 33,
+  title: "Video 10",
+  tasks: [
+    "04:32:30 - End Authentication + Testing"
+  ]
+},
+{
+  day: 34,
+  title: "Video 11",
+  tasks: [
+    "00:00 - 01:20:23 Auth Setup"
+  ]
+},
+{
+  day: 35,
+  title: "Video 11",
+  tasks: [
+    "01:20:23 - 02:46:44 Banking Logic"
+  ]
+},
+{
+  day: 36,
+  title: "Video 11",
+  tasks: [
+    "02:46:44 - End Transactions + Deployment"
+  ]
+},
+{
+  day: 37,
+  title: "Video 12",
+  tasks: [
+    "00:00 - 01:16:24 Tokens + Sessions"
+  ]
+},
+{
+  day: 38,
+  title: "Video 12",
+  tasks: [
+    "01:16:24 - End OTP Authentication"
+  ]
+},
+{
+  day: 39,
+  title: "Video 13",
+  tasks: [
+    "00:00 - 01:51:54 Authentication + Frontend Setup"
+  ]
+},
+{
+  day: 40,
+  title: "Video 13",
+  tasks: [
+    "01:51:54 - 03:56:22 AI Feature Backend"
+  ]
+},
+{
+  day: 41,
+  title: "Video 13",
+  tasks: [
+    "03:56:22 - End AI Project Completion"
+  ]
+},
+{
+  day: 42,
+  title: "Revision",
+  tasks: [
+    "React Revision",
+    "Build Notes App Again"
+  ]
+},
+{
+  day: 43,
+  title: "Revision",
+  tasks: [
+    "Backend Revision",
+    "Build Notes API"
+  ]
+},
+{
+  day: 44,
+  title: "Project",
+  tasks: [
+    "Build Full Stack Project"
+  ]
+},
+{
+  day: 45,
+  title: "Placement Prep",
+  tasks: [
+    "Upload Projects To GitHub",
+    "Resume Updates",
+    "Interview Revision"
+  ]
+}
 ];
 
 const KEY = "fsd_roadmap_v1";
@@ -62,7 +371,7 @@ function updateStats() {
   document.getElementById('s-items').textContent = done;
   document.getElementById('s-pct').textContent   = Math.round(done / total * 100) + '%';
   document.getElementById('prog-fill').style.width = (done / total * 100) + '%';
-  document.getElementById('prog-label').textContent = daysDone + ' of 20 days completed';
+  document.getElementById('prog-label').textContent = daysDone + ' of 45 days completed';
 
   DAYS.forEach(d => {
     const card = document.getElementById('card-' + d.day);

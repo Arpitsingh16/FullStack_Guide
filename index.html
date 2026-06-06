@@ -5,12 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Full Stack Roadmap Tracker</title>
   <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="themes.css">
 </head>
 <body>
   <div class="wrap">
     <div class="header">
       <h1 class="title">Full Stack Roadmap</h1>
       <button class="reset-btn" onclick="resetAll()">Reset all</button>
+      <select id="themeSelector" class="theme-selector">
+  <option value="green">Green</option>
+  <option value="blue">Blue</option>
+  <option value="purple">Purple</option>
+  <option value="orange">Orange</option>
+  <option value="dark">Dark</option>
+</select>
     </div>
 
     <div class="stats">
@@ -20,11 +28,11 @@
     </div>
 
     <div class="progress-bar"><div class="progress-fill" id="prog-fill"></div></div>
-    <div class="prog-label" id="prog-label">0 of 20 days completed</div>
-
+    <div class="prog-label" id="prog-label">0 of 45 days completed</div>
     <div id="days-container"></div>
   </div>
 
   <script src="index.js"></script>
+  <script src="theme.js"></script>
 </body>
 </html>

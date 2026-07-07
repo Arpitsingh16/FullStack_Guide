@@ -1,331 +1,549 @@
 const DAYS = [
 {
   day: 1,
-  title: "Video 1",
-  tasks: [
-    "00:00 - 11:07 Environment Setup",
-    "11:07 - 39:18 HTML"
+  title: "Java Basics — Intro & JVM",
+  topics: [
+    "What is Java, History, Features",
+    "JVM, JRE, JDK",
+    "Java Program Structure",
+    "Compilation Process, Bytecode, Write Once Run Anywhere"
   ]
 },
 {
   day: 2,
-  title: "Video 1",
-  tasks: [
-    "39:18 - 01:10:00 CSS Basics"
+  title: "Variables, Data Types & Operators",
+  topics: [
+    "Primitive & Non-Primitive Data Types",
+    "Variable Declaration, Initialization, Scope",
+    "Type Conversion, Type Casting, Literals",
+    "Arithmetic, Assignment, Relational, Logical, Unary, Ternary, Bitwise, Shift Operators",
+    "Operator Precedence"
   ]
 },
 {
   day: 3,
-  title: "Video 1",
-  tasks: [
-    "01:10:00 - 01:41:26 CSS Advanced"
+  title: "Control Statements",
+  topics: [
+    "if, if-else, else-if, nested if, switch",
+    "while, do-while, for, enhanced for, nested loops",
+    "break, continue, return"
   ]
 },
 {
   day: 4,
-  title: "Video 1",
-  tasks: [
-    "01:41:26 - 02:17:07 CSS Project"
+  title: "Methods",
+  topics: [
+    "Method Declaration, Calling, Parameters, Return Type",
+    "Method Overloading",
+    "Pass by Value",
+    "Recursion",
+    "Varargs"
   ]
 },
 {
   day: 5,
-  title: "Video 2",
-  tasks: [
-    "00:00 - 48:44 Units",
-    "48:44 - 01:17:14 Flexbox"
+  title: "Arrays",
+  topics: [
+    "One-Dimensional, Two-Dimensional, Multidimensional Arrays",
+    "Array Operations & Traversal",
+    "Arrays Utility Class"
+  ],
+  project: [
+    "Console-based Student Management System (Core Java) — start"
   ]
 },
 {
   day: 6,
-  title: "Video 2",
-  tasks: [
-    "01:17:14 - 01:51:05 Grid",
-    "01:51:05 - End Media Queries"
+  title: "Classes & Objects",
+  topics: [
+    "Creating Classes, Objects, Instance Variables",
+    "Static Variables, Static Methods, Static Block",
+    "Object Creation"
   ]
 },
 {
   day: 7,
-  title: "Video 2",
-  tasks: [
-    "Tailwind Responsiveness",
-    "Project Section"
+  title: "Constructors",
+  topics: [
+    "Default & Parameterized Constructor",
+    "Constructor Overloading & Chaining",
+    "this() and super()"
   ]
 },
 {
   day: 8,
-  title: "Video 3",
-  tasks: [
-    "00:00 - 01:06:48 Variables",
-    "01:06:48 - 02:03:57 Data Types"
+  title: "Encapsulation",
+  topics: [
+    "Private Members",
+    "Getter / Setter",
+    "Data Hiding"
   ]
 },
 {
   day: 9,
-  title: "Video 3",
-  tasks: [
-    "02:03:57 - 03:20:40 Operators",
-    "03:20:40 - 04:39:18 Loops"
+  title: "Inheritance",
+  topics: [
+    "Single, Multilevel, Hierarchical Inheritance",
+    "Why Multiple Inheritance isn't supported",
+    "super keyword"
   ]
 },
 {
   day: 10,
-  title: "Video 3",
-  tasks: [
-    "04:39:18 - 06:17:14 Functions"
+  title: "Polymorphism",
+  topics: [
+    "Compile-time vs Runtime Polymorphism",
+    "Method Overloading vs Overriding",
+    "Dynamic Method Dispatch"
   ]
 },
 {
   day: 11,
-  title: "Video 3",
-  tasks: [
-    "06:17:14 - 07:16:36 Arrays",
-    "07:16:36 - End Objects"
+  title: "Abstraction & Interfaces",
+  topics: [
+    "Abstract Class, Abstract Method",
+    "Difference between Abstraction & Encapsulation",
+    "Interfaces, Multiple Interface",
+    "Default Methods, Static Methods, Functional Interface"
   ]
 },
 {
   day: 12,
-  title: "Video 4",
-  tasks: [
-    "00:00 - 01:38:46 DOM"
+  title: "Access Modifiers & Object Class",
+  topics: [
+    "public, private, protected, default",
+    "toString(), equals(), hashCode()",
+    "clone(), finalize()"
+  ],
+  project: [
+    "Console-based Student Management System — complete with OOP"
   ]
 },
 {
   day: 13,
-  title: "Video 4",
-  tasks: [
-    "01:38:46 - 04:16:37 Events"
+  title: "Packages & Wrapper Classes",
+  topics: [
+    "Creating Packages, Import, Package Naming",
+    "Integer, Double, Character, Boolean",
+    "Autoboxing, Unboxing"
   ]
 },
 {
   day: 14,
-  title: "Video 4",
-  tasks: [
-    "04:16:37 - End Forms, Timers, Storage"
+  title: "Enums & Generics",
+  topics: [
+    "Enum Basics, Enum Methods, Enum with Constructor",
+    "Generic Class, Generic Method",
+    "Wildcards, extends, super"
   ]
 },
 {
   day: 15,
-  title: "Video 5",
-  tasks: [
-    "00:00 - 01:13:15 Scope, Execution Context, Closures"
+  title: "Annotations & Inner Classes",
+  topics: [
+    "@Override, @Deprecated, @SuppressWarnings, @FunctionalInterface",
+    "Member Inner, Static Nested, Anonymous, Local Inner Classes"
   ]
 },
 {
   day: 16,
-  title: "Video 5",
-  tasks: [
-    "01:13:15 - 02:10:04 this Keyword"
+  title: "Exception Handling",
+  topics: [
+    "Exception Hierarchy: Checked, Unchecked, Error",
+    "try, catch, finally",
+    "throw, throws, Multiple Catch, Nested Try",
+    "Custom Exception"
   ]
 },
 {
   day: 17,
-  title: "Video 5",
-  tasks: [
-    "02:10:04 - 03:08:05 OOP"
+  title: "String Handling",
+  topics: [
+    "String, String Pool, Immutable Objects",
+    "StringBuilder vs StringBuffer (Mutable, Thread Safety, Performance)",
+    "split(), substring(), trim(), replace(), contains(), startsWith(), endsWith(), equals(), compareTo()"
   ]
 },
 {
   day: 18,
-  title: "Video 5",
-  tasks: [
-    "03:08:05 - End Promises, Async Await, Fetch"
+  title: "Collections — List",
+  topics: [
+    "Collection Framework Overview, Collection Interface, Iterable",
+    "ArrayList, LinkedList, Vector, Stack"
   ]
 },
 {
   day: 19,
-  title: "Video 6",
-  tasks: [
-    "Module Pattern",
-    "Revealing Module Pattern"
+  title: "Collections — Set & Queue",
+  topics: [
+    "HashSet, LinkedHashSet, TreeSet",
+    "Queue, PriorityQueue, Deque, ArrayDeque"
   ]
 },
 {
   day: 20,
-  title: "Video 6",
-  tasks: [
-    "Factory Pattern",
-    "Observer Pattern"
+  title: "Collections — Map & Iteration",
+  topics: [
+    "HashMap, LinkedHashMap, TreeMap, Hashtable",
+    "Iterator, ListIterator, Enhanced For Loop, forEach()"
   ]
 },
 {
   day: 21,
-  title: "JavaScript Revision",
-  tasks: [
-    "Revise Videos 3-6",
-    "Build Notes App"
+  title: "Comparable & Comparator",
+  topics: [
+    "Comparable interface",
+    "Comparator interface",
+    "Custom Sorting"
   ]
 },
 {
   day: 22,
-  title: "Video 7",
-  tasks: [
-    "00:00 - 01:47:37 React Basics + Props"
+  title: "File Handling",
+  topics: [
+    "File, FileReader, FileWriter",
+    "BufferedReader, BufferedWriter, PrintWriter, Scanner",
+    "Serialization, Deserialization"
   ]
 },
 {
   day: 23,
-  title: "Video 7",
-  tasks: [
-    "01:47:37 - 04:30:51 Props Projects + Styling"
+  title: "Multithreading",
+  topics: [
+    "Thread Class, Runnable, Thread Lifecycle",
+    "synchronized keyword, wait(), notify()",
+    "Executor Framework, Thread Pool, Callable, Future"
   ]
 },
 {
   day: 24,
-  title: "Video 7",
-  tasks: [
-    "04:30:51 - 06:15:46 Functions, Hooks, Forms"
+  title: "Java 8+ — Lambdas & Functional Interfaces",
+  topics: [
+    "Lambda Expressions Syntax, Functional Programming",
+    "Predicate, Function, Consumer, Supplier"
   ]
 },
 {
   day: 25,
-  title: "Video 7",
-  tasks: [
-    "06:15:46 - 08:17:01 Notes App + API Calls"
+  title: "Java 8+ — Stream API",
+  topics: [
+    "filter, map, flatMap, sorted, collect, reduce",
+    "distinct, limit, skip",
+    "Optional Class: orElse(), orElseGet(), ifPresent()"
   ]
 },
 {
   day: 26,
-  title: "Video 7",
-  tasks: [
-    "08:17:01 - End Routing + Context API"
+  title: "Java 8+ — Method References & Date/Time API",
+  topics: [
+    "Static, Instance, Constructor Method References",
+    "LocalDate, LocalTime, LocalDateTime",
+    "Duration, Period"
+  ],
+  project: [
+    "Java Fundamentals + OOP Revision"
   ]
 },
 {
   day: 27,
-  title: "Video 8",
-  tasks: [
-    "Redux Complete"
+  title: "SQL — Database Basics & DDL/DML",
+  topics: [
+    "DBMS, RDBMS, Tables, Rows, Columns",
+    "CREATE, ALTER, DROP, INSERT, UPDATE, DELETE, SELECT"
   ]
 },
 {
   day: 28,
-  title: "Video 9",
-  tasks: [
-    "00:00 - 01:22:09 TypeScript Fundamentals"
+  title: "SQL — Constraints & Queries",
+  topics: [
+    "Primary Key, Foreign Key, Unique, Not Null, Check, Default",
+    "WHERE, ORDER BY, GROUP BY, HAVING, DISTINCT, LIMIT"
   ]
 },
 {
   day: 29,
-  title: "Video 9",
-  tasks: [
-    "01:22:09 - 02:50:09 Classes & OOP"
+  title: "SQL — Joins & Functions",
+  topics: [
+    "INNER, LEFT, RIGHT, FULL, SELF JOIN",
+    "COUNT, SUM, AVG, MAX, MIN"
   ]
 },
 {
   day: 30,
-  title: "Video 9",
-  tasks: [
-    "02:50:09 - End Functions, Generics, Modules"
+  title: "SQL — Advanced",
+  topics: [
+    "Views, Indexes",
+    "Transactions & ACID",
+    "Normalization, Subqueries"
   ]
 },
 {
   day: 31,
-  title: "Video 10",
-  tasks: [
-    "00:00 - 01:43:36 Express + APIs"
+  title: "JDBC",
+  topics: [
+    "JDBC Architecture, Driver, Connection",
+    "Statement, PreparedStatement, CallableStatement, ResultSet",
+    "Batch Processing, Transactions"
+  ],
+  project: [
+    "Library Management System (Java + JDBC + MySQL)"
   ]
 },
 {
   day: 32,
-  title: "Video 10",
-  tasks: [
-    "01:43:36 - 04:32:30 MongoDB + Project"
+  title: "Git & GitHub",
+  topics: [
+    "Git Installation, Repository, Init, Clone",
+    "Add, Commit, Push, Pull",
+    "Branch, Merge, Conflict Resolution, .gitignore"
   ]
 },
 {
   day: 33,
-  title: "Video 10",
-  tasks: [
-    "04:32:30 - End Authentication + Testing"
+  title: "Maven",
+  topics: [
+    "Maven Introduction, Project Structure, pom.xml",
+    "Dependencies, Plugins",
+    "Build Lifecycle, Profiles"
   ]
 },
 {
   day: 34,
-  title: "Video 11",
-  tasks: [
-    "00:00 - 01:20:23 Auth Setup"
+  title: "HTTP & Web Basics",
+  topics: [
+    "Client, Server, Browser, DNS, URL, URI",
+    "Request, Response, Headers, Cookies, Sessions",
+    "JSON, XML, REST, RESTful API, HTTP Methods, Status Codes"
   ]
 },
 {
   day: 35,
-  title: "Video 11",
-  tasks: [
-    "01:20:23 - 02:46:44 Banking Logic"
+  title: "Spring Framework Core",
+  topics: [
+    "IoC, Dependency Injection",
+    "Beans, Bean Scope, Autowiring",
+    "Configuration, Component Scan, Spring Container"
   ]
 },
 {
   day: 36,
-  title: "Video 11",
-  tasks: [
-    "02:46:44 - End Transactions + Deployment"
+  title: "Spring Boot Basics",
+  topics: [
+    "Spring Boot Introduction, Spring Initializr",
+    "Properties, Profiles, Auto Configuration"
   ]
 },
 {
   day: 37,
-  title: "Video 12",
-  tasks: [
-    "00:00 - 01:16:24 Tokens + Sessions"
+  title: "Spring Boot — Controllers, Services, Repositories",
+  topics: [
+    "Controllers, Services, Repositories",
+    "CRUD, Validation",
+    "Exception Handling, Logging"
+  ],
+  project: [
+    "Employee Management REST API (Spring Boot) — start"
   ]
 },
 {
   day: 38,
-  title: "Video 12",
-  tasks: [
-    "01:16:24 - End OTP Authentication"
+  title: "Spring Data JPA — ORM Basics",
+  topics: [
+    "ORM, Hibernate",
+    "Entity, Repository"
   ]
 },
 {
   day: 39,
-  title: "Video 13",
-  tasks: [
-    "00:00 - 01:51:54 Authentication + Frontend Setup"
+  title: "Spring Data JPA — Relationships",
+  topics: [
+    "OneToOne, OneToMany, ManyToOne, ManyToMany",
+    "JPQL",
+    "Pagination, Sorting"
+  ],
+  project: [
+    "Employee Management REST API — complete with JPA"
   ]
 },
 {
   day: 40,
-  title: "Video 13",
-  tasks: [
-    "01:51:54 - 03:56:22 AI Feature Backend"
+  title: "REST API Development",
+  topics: [
+    "REST Principles, CRUD APIs",
+    "DTO, ModelMapper, Validation",
+    "Pagination, Filtering"
   ]
 },
 {
   day: 41,
-  title: "Video 13",
-  tasks: [
-    "03:56:22 - End AI Project Completion"
+  title: "API Documentation & Testing Tools",
+  topics: [
+    "Swagger / OpenAPI",
+    "Postman"
+  ],
+  project: [
+    "Expense Tracker API"
   ]
 },
 {
   day: 42,
-  title: "Revision",
-  tasks: [
-    "React Revision",
-    "Build Notes App Again"
+  title: "Spring Security — Authentication & Authorization",
+  topics: [
+    "Authentication, Authorization",
+    "BCrypt"
   ]
 },
 {
   day: 43,
-  title: "Revision",
-  tasks: [
-    "Backend Revision",
-    "Build Notes API"
+  title: "Spring Security — JWT",
+  topics: [
+    "JWT, Refresh Token",
+    "Role-Based Access"
+  ],
+  project: [
+    "JWT Authentication System"
   ]
 },
 {
   day: 44,
-  title: "Project",
-  tasks: [
-    "Build Full Stack Project"
+  title: "Testing",
+  topics: [
+    "JUnit, Mockito",
+    "Unit Testing, Integration Testing"
   ]
 },
 {
   day: 45,
-  title: "Placement Prep",
+  title: "Docker Basics",
+  topics: [
+    "Docker Basics, Images, Containers",
+    "Dockerfile, Docker Compose",
+    "Dockerizing Spring Boot"
+  ]
+},
+{
+  day: 46,
+  title: "Microservices — Concepts",
+  topics: [
+    "Monolith vs Microservices",
+    "API Gateway, Service Discovery"
+  ]
+},
+{
+  day: 47,
+  title: "Microservices — Resilience & Communication",
+  topics: [
+    "Config Server, Load Balancer",
+    "Circuit Breaker",
+    "Communication (REST/OpenFeign)"
+  ]
+},
+{
+  day: 48,
+  title: "AWS Basics",
+  topics: [
+    "EC2, S3, RDS",
+    "IAM",
+    "Elastic Beanstalk, Basic Deployment"
+  ]
+},
+{
+  day: 49,
+  title: "Project — E-commerce Backend (Part 1)",
+  project: [
+    "Design schema & entities",
+    "Implement core CRUD APIs"
+  ]
+},
+{
+  day: 50,
+  title: "Project — E-commerce Backend (Part 2)",
+  project: [
+    "Add auth, security & validation",
+    "Add pagination, filtering, exception handling"
+  ]
+},
+{
+  day: 51,
+  title: "Project — Blog API",
+  project: [
+    "Design schema (Users, Posts, Comments)",
+    "Build CRUD APIs with JWT auth"
+  ]
+},
+{
+  day: 52,
+  title: "Project — Full-stack Setup",
+  project: [
+    "Scaffold React frontend",
+    "Connect to Spring Boot backend API"
+  ]
+},
+{
+  day: 53,
+  title: "Project — Full-stack Build (React + Spring Boot)",
+  project: [
+    "Build core pages & integrate auth",
+    "Wire up CRUD flows end-to-end"
+  ]
+},
+{
+  day: 54,
+  title: "Project — Full-stack Polish & Deploy",
+  project: [
+    "Dockerize frontend & backend",
+    "Deploy to AWS / Elastic Beanstalk"
+  ]
+},
+{
+  day: 55,
+  title: "Interview Prep — Java & OOP",
   tasks: [
-    "Upload Projects To GitHub",
-    "Resume Updates",
-    "Interview Revision"
+    "Java Interview Questions",
+    "OOP Scenarios"
+  ]
+},
+{
+  day: 56,
+  title: "Interview Prep — Collections & Multithreading",
+  tasks: [
+    "Collections Interview Questions",
+    "Multithreading Questions"
+  ]
+},
+{
+  day: 57,
+  title: "Interview Prep — SQL & Spring Boot",
+  tasks: [
+    "SQL Interview Questions",
+    "Spring Boot Interview Questions"
+  ]
+},
+{
+  day: 58,
+  title: "Interview Prep — JPA, REST & JWT",
+  tasks: [
+    "JPA & Hibernate Interview Questions",
+    "REST API Questions",
+    "JWT Questions"
+  ]
+},
+{
+  day: 59,
+  title: "Interview Prep — Tools & System Design",
+  tasks: [
+    "Maven Questions",
+    "Git Questions",
+    "System Design Basics"
+  ]
+},
+{
+  day: 60,
+  title: "DSA Revision & Wrap-up",
+  tasks: [
+    "Arrays, Strings, Linked Lists, Stacks, Queues",
+    "Trees, Hashing, Basic Graphs",
+    "Upload Projects to GitHub, Resume Updates"
   ]
 }
 ];
@@ -371,7 +589,7 @@ function updateStats() {
   document.getElementById('s-items').textContent = done;
   document.getElementById('s-pct').textContent   = Math.round(done / total * 100) + '%';
   document.getElementById('prog-fill').style.width = (done / total * 100) + '%';
-  document.getElementById('prog-label').textContent = daysDone + ' of 45 days completed';
+  document.getElementById('prog-label').textContent = daysDone + ' of ' + DAYS.length + ' days completed';
 
   DAYS.forEach(d => {
     const card = document.getElementById('card-' + d.day);
@@ -487,7 +705,7 @@ function render() {
 
     const dateEl = document.createElement('div');
     dateEl.className = 'day-date';
-    dateEl.textContent = d.date;
+    dateEl.textContent = d.date || '';
 
     info.appendChild(titleEl);
     info.appendChild(dateEl);
